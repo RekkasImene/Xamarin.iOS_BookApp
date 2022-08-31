@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+        <ProjectGuid>{FDAA5126-D95C-4C6F-91C5-6B6CF7824852}</ProjectGuid>
+        <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <TemplateGuid>{edc1b0fa-90cd-4038-8fad-98fe74adb368}</TemplateGuid>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>test3</RootNamespace>
+        <AssemblyName>test3</AssemblyName>
+        <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+        <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+        <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+        <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+        <ProvisioningType>automatic</ProvisioningType>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+        <DefineConstants>DEBUG</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchArch>x86_64</MtouchArch>
+        <MtouchLink>None</MtouchLink>
+        <MtouchDebug>true</MtouchDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchLink>None</MtouchLink>
+        <MtouchArch>x86_64</MtouchArch>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\iPhone\Debug</OutputPath>
+        <DefineConstants>DEBUG</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchArch>ARM64</MtouchArch>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <CodesignKey>iPhone Developer</CodesignKey>
+        <MtouchDebug>true</MtouchDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\iPhone\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <MtouchArch>ARM64</MtouchArch>
+        <CodesignKey>iPhone Developer</CodesignKey>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Core" />
+        <Reference Include="Xamarin.iOS" />
+        <Reference Include="System.Numerics" />
+        <Reference Include="System.Numerics.Vectors" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Xamarin.TestCloud.Agent" Version="0.21.9" />
+      <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+      <PackageReference Include="SQLitePCLRaw.core">
+        <Version>2.0.7</Version>
+      </PackageReference>
+      <PackageReference Include="sqlite-net-pcl">
+        <Version>1.8.116</Version>
+      </PackageReference>
+      <PackageReference Include="SQLitePCLRaw.provider.sqlite3.ios_unified">
+        <Version>1.1.14</Version>
+      </PackageReference>
+      <PackageReference Include="sqlite-net">
+        <Version>1.6.292</Version>
+      </PackageReference>
+      <PackageReference Include="SQLite.Net-PCL">
+        <Version>3.1.1</Version>
+      </PackageReference>
+      <PackageReference Include="Xam.Plugin.Media">
+        <Version>5.0.1</Version>
+      </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Resources\" />
+        <Folder Include="ViewControllers\" />
+        <Folder Include="Models\" />
+        <Folder Include="DataSource\" />
+        <Folder Include="Views\" />
+        <Folder Include="Interface\" />
+        <Folder Include="Adapter\" />
+        <Folder Include="Helpers\" />
+    </ItemGroup>
+    <ItemGroup>
+        <InterfaceDefinition Include="Views\LaunchScreen.storyboard" />
+        <InterfaceDefinition Include="Views\Main.storyboard" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Info.plist" />
+        <None Include="Entitlements.plist" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Main.cs" />
+        <Compile Include="AppDelegate.cs" />
+        <Compile Include="SceneDelegate.cs" />
+        <Compile Include="ViewControllers\AddBookViewController.cs" />
+        <Compile Include="ViewControllers\AddBookViewController.designer.cs">
+          <DependentUpon>AddBookViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\BooksTableViewController.cs" />
+        <Compile Include="ViewControllers\BooksTableViewController.designer.cs">
+          <DependentUpon>BooksTableViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\EditBookViewController.cs" />
+        <Compile Include="ViewControllers\EditBookViewController.designer.cs">
+          <DependentUpon>EditBookViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\ViewController.cs" />
+        <Compile Include="ViewControllers\ViewController.designer.cs">
+          <DependentUpon>ViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Models\UserModel.cs" />
+        <Compile Include="Interface\IUsers.cs" />
+        <Compile Include="DataSource\MyConnectionSQLite.cs" />
+        <Compile Include="DataSource\UserLocalDatabase.cs" />
+        <Compile Include="Adapter\BookTableViewAdapter.cs" />
+        <Compile Include="DataSource\BookLocalDatabase.cs" />
+        <Compile Include="Models\BookModel.cs" />
+        <Compile Include="Interface\IBooks.cs" />
+        <Compile Include="DataSource\ValidatePassword.cs" />
+        <Compile Include="ViewControllers\MainNavigationController.cs" />
+        <Compile Include="ViewControllers\MainNavigationController.designer.cs">
+          <DependentUpon>MainNavigationController.cs</DependentUpon>
+        </Compile>
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
